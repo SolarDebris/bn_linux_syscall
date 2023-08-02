@@ -6,9 +6,9 @@
 #include <sstream>
 #include <vector>
 
-#include "binaryninjaapi.h"
+//#include "binaryninjaapi.h"
 
-using namespace BinaryNinja;
+//using namespace BinaryNinja;
 using namespace std;
 
 struct SyscallInfo {
@@ -16,10 +16,10 @@ struct SyscallInfo {
     string name;
     int numParams;
     vector<string> params;
-}
+};
 
 vector<SyscallInfo> parseCSV(const string &filename){
-    vector<SycallInfo> syscallInfo;
+    vector<SyscallInfo> syscallInfo;
 
     ifstream file(filename);
     if (!file){
@@ -56,10 +56,10 @@ vector<SyscallInfo> parseCSV(const string &filename){
 }
 
 
-static void parse_syscall(void){
+//static void parse_syscall(void){
 
 
-}
+//}
 
 
 int main(int argc, char *argv[]){
