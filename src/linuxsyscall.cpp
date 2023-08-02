@@ -45,21 +45,16 @@ vector<SyscallInfo> parseCSV(const string &filename){
                 params.push_back(fields[i]);
             }
 
-            syscallInfo.push_back({number, name, numParams, params});
+            struct SyscallInfo entry = {number, name, numParams, params};
+
+            syscallInfo.push_back(entry);
 
         }
     }
 
     file.close();
     return syscallInfo;
-
 }
-
-
-//static void parse_syscall(void){
-
-
-//}
 
 
 int main(int argc, char *argv[]){
