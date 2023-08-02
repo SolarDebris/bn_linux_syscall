@@ -27,11 +27,11 @@ vector<SyscallInfo> parseCSV(const string &filename){
     }
 
     string line;
-    while (getline(file, line)){
+    while (getline(file, line, '\n')){
         istringstream iss(line);
         string field;
         vector<string> fields;
-        while (getline(iss, field, ",")){
+        while (getline(iss, field, ',')){
             fields.push_back(field);
         }
 
